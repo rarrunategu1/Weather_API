@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Weather API
+        </title>
+        <style>
+        body {
+            background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/SZMXphYEipbdr8zi/beautiful-clouds-close-up-weather-background_skp3rq4r__F0000.png");
+           
+        }
+        .container {
+            text-align: center;
+            margin-top: 180px;
+            font-size: 20px;
+            
+        }
+        #title {
+            font-weight: bold;
+            font-size: 25px;
+            
+        }
+        
+        button {
+            font-weight: bold;
+        }
+            
+        </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div id="title">What's The Weather Today?</div>
+            <br>
+            <div class="weather-info">
+                <div id="location" class="info"></div>
+                    <div id="temperature" class="info"></div>
+                    <span id="temperature-num"></span>
+                    <span>&deg;</span>
+                    <span id="temperature-scale">C</span>
+                    </div>
+                <div id="weather-condition" class="info"></div>
+                <div id="weather-icon" class="info"></div>
+                <button type="btn" class="btn btn default" id="toggle-button">Change to Fahrenheight degrees</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
