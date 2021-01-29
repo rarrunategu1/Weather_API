@@ -6,7 +6,7 @@ const temScale = document.getElementById("temperature-scale");
 const weatherCon = document.getElementById("weather-condition");
 const weatherIcon = document.getElementById("weather-icon");
 const togButton = document.getElementById("toggle-button");
-
+const weather_background = document.getElementById("weather_container");
 //get location using HTML5 Geolocation 
 function getLocation() {
   if (navigator.geolocation) {
@@ -36,6 +36,10 @@ function updateDataToUI(location, weather, temp) {
   weatherCon.innerHTML = weather[0].main;
   loc.innerHTML = location;
   temNum.innerHTML = `${temp.toFixed()}`;
+  if(weatherCon.innerHTML == "Clouds")
+  {
+    document.body.style.backgroundImage = "url('https://www.publicdomainpictures.net/pictures/270000/nahled/cloudy-skies-background.jpg')";
+  }
 }
 window.onload = function() {
   getLocation();
