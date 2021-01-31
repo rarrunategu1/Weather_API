@@ -39,6 +39,9 @@ function updateDataToUI(location, weather, temp) {
   if(weatherCon.innerHTML == "Clouds")
   {
     document.body.style.backgroundImage = "url('https://www.publicdomainpictures.net/pictures/270000/nahled/cloudy-skies-background.jpg')";
+  }else if (weatherCon.innerHTML == "Sunny")
+  {
+    document.body.style.backgroundImage = "https://image.freepik.com/free-vector/sunshine-background-poster_1284-9444.jpg"
   }
 }
 window.onload = function() {
