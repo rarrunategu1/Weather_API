@@ -6,7 +6,7 @@ const temScale = document.getElementById("temperature-scale");
 const weatherCon = document.getElementById("weather-condition");
 const weatherIcon = document.getElementById("weather-icon");
 const togButton = document.getElementById("toggle-button");
-const weather_background = document.getElementById("weather_container");
+const weather_background = document.getElementById("weather_image");
 //get location using HTML5 Geolocation 
 function getLocation() {
   if (navigator.geolocation) {
@@ -38,13 +38,16 @@ function updateDataToUI(location, weather, temp) {
   temNum.innerHTML = `${temp.toFixed()}`;
   if(weatherCon.innerHTML == "Clouds")
   {
-    document.body.style.backgroundImage = "url('https://www.publicdomainpictures.net/pictures/270000/nahled/cloudy-skies-background.jpg') alt = 'clouds'";
+    weather_background.style.backgroundImage = "url('https://www.publicdomainpictures.net/pictures/270000/nahled/cloudy-skies-background.jpg')";
+    
   }else if (weatherCon.innerHTML == "Sunny")
   {
-    document.body.style.backgroundImage = "url('https://image.freepik.com/free-vector/sunshine-background-poster_1284-9444.jpg') alt = 'sun'";
+    weather_background.style.backgroundImage = "url('https://image.freepik.com/free-vector/sunshine-background-poster_1284-9444.jpg')";
+    
   }else if (weatherCon.innerHTML == "Snow")
   {
-    document.body.style.backgroundImage = "url('https://th.bing.com/th/id/R65bfec300822a22bdbcf78b6608ee28b?rik=oyoPHyG4rRQEbw&riu=http%3a%2f%2fi.huffpost.com%2fgen%2f1503368%2fimages%2fo-SNOWFALL-facebook.jpg&ehk=Y9D3zQdHUHGnyvQCXoqyNsV1zLSdduw8zRqY3ibrOk8%3d&risl=&pid=ImgRaw') alt = 'snow'";
+    weather_background.style.backgroundImage = "url('https://th.bing.com/th/id/R65bfec300822a22bdbcf78b6608ee28b?rik=oyoPHyG4rRQEbw&riu=http%3a%2f%2fi.huffpost.com%2fgen%2f1503368%2fimages%2fo-SNOWFALL-facebook.jpg&ehk=Y9D3zQdHUHGnyvQCXoqyNsV1zLSdduw8zRqY3ibrOk8%3d&risl=&pid=ImgRaw')";
+    
   }
 }
 window.onload = function() {
